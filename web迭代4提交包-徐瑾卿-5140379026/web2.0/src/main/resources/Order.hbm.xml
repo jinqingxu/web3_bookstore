@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping
+        PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.module.bean">
+
+    <class name="Order" table="orders"  catalog="mydb">
+
+        <id name="id" column="id" type="int">
+            <generator class="native"></generator>
+        </id>
+        <property name="username" column="username" type="string"></property>
+        <property name="date" column="date" type="timestamp"></property>
+         <property name="sumprice" column="sumprice" type="double"></property>
+        <property name="sumnumber" column="sumnumber" type="int"></property>
+        <property name="orderid" column="orderid" type="string"></property>
+    </class>
+
+</hibernate-mapping>

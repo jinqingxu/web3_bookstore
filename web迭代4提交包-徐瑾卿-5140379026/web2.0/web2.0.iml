@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="web" name="Web">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="context.xml" url="file://$MODULE_DIR$/src/main/webapp/META-INF/context.xml" />
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="Spring" name="Spring">
+      <configuration />
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5">
+    <output url="file://$MODULE_DIR$/target/classes" />
+    <output-test url="file://$MODULE_DIR$/target/test-classes" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
+    </content>
+    <orderEntry type="jdk" jdkName="1.7" jdkType="JavaSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Struts 2-2.3.20.1" level="project" />
+    <orderEntry type="library" name="Spring-4.3.7.RELEASE" level="project" />
+    <orderEntry type="library" name="Spring MVC-4.3.7.RELEASE" level="project" />
+    <orderEntry type="library" name="Hibernate 5.2.3-5.2.3" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/mongo-2.5.3.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/bcprov-jdk15on-148.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/commons-codec-1.10.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-security-acl-3.1.4.RELEASE.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-security-aspects-3.1.4.RELEASE.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-security-cas-3.1.4.RELEASE.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-security-config-3.1.4.RELEASE.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-security-core-3.1.4.RELEASE.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-security-crypto-3.1.4.RELEASE.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-security-ldap-3.1.4.RELEASE.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-security-openid-3.1.4.RELEASE.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-security-remoting-3.1.4.RELEASE.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-security-taglibs-3.1.4.RELEASE.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-security-web-3.1.4.RELEASE.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-aop-3.1.0.release.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/aspectjrt.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/aspectjweaver.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/javax.json.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/lib/soap/lib" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/lib/soap/lib" />
+        </SOURCES>
+        <jarDirectory url="file://$MODULE_DIR$/lib/soap/lib" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/lib/soap/lib" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/lib/lucene" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/lib/lucene" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES />
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/analysis/common/src/java" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/analysis/common/src/test" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/analysis/common/src/tools/java" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/analysis/icu/src/java" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/analysis/icu/src/test" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/analysis/icu/src/tools/java" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/analysis/kuromoji/src/java" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/analysis/kuromoji/src/test" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/analysis/kuromoji/src/tools/java" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/analysis/kuromoji/src/tools/test" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/analysis/morfologik/src/java" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/analysis/morfologik/src/test" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/analysis/phonetic/src/java" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/analysis/phonetic/src/test" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/analysis/smartcn/src/java" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/analysis/smartcn/src/test" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/analysis/stempel/src/java" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/analysis/stempel/src/test" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/analysis/uima/src/java" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/analysis/uima/src/test" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/benchmark/src/java" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/benchmark/src/test" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/classification/src/java" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/classification/src/test" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/codecs/src/java" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/codecs/src/test" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/core/src/java" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/core/src/test" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/demo/src/java" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/demo/src/test" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/facet/src/java" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/facet/src/test" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/grouping/src/java" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/grouping/src/test" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/highlighter/src/java" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/highlighter/src/test" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/join/src/java" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/join/src/test" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/memory/src/java" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/memory/src/test" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/misc/src/java" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/misc/src/test" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/queries/src/java" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/queries/src/test" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/queryparser/src/java" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/queryparser/src/test" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/replicator/src/java" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/replicator/src/test" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/sandbox/src/java" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/sandbox/src/test" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/spatial/src/java" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/spatial/src/test" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/suggest/src/java" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/suggest/src/test" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/test-framework/src/java" />
+          <root url="file://$MODULE_DIR$/lib/lucene2/lucene-4.4.0/tools/src/java" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/lib/mongodb2" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/lib/mongodb2" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="Maven: org.springframework:spring-core:3.1.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-asm:3.1.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: commons-logging:commons-logging:1.1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-web:3.1.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-context:3.1.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-expression:3.1.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-beans:3.1.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-tx:3.1.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-aop:3.1.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.freemarker:freemarker:2.3.19" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-aspects:3.1.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-context-support:3.1.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-orm:3.1.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:3.1.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.struts:struts2-core:2.3.4" level="project" />
+    <orderEntry type="library" name="Maven: ognl:ognl:3.0.5" level="project" />
+    <orderEntry type="library" name="Maven: javassist:javassist:3.11.0.GA" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.struts:struts2-convention-plugin:2.3.4" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.struts:struts2-spring-plugin:2.3.4" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.struts.xwork:xwork-core:2.3.4" level="project" />
+    <orderEntry type="library" name="Maven: asm:asm:3.3" level="project" />
+    <orderEntry type="library" name="Maven: asm:asm-commons:3.3" level="project" />
+    <orderEntry type="library" name="Maven: asm:asm-tree:3.3" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate:hibernate-core:3.6.9.Final" level="project" />
+    <orderEntry type="library" name="Maven: antlr:antlr:2.7.6" level="project" />
+    <orderEntry type="library" name="Maven: commons-collections:commons-collections:3.1" level="project" />
+    <orderEntry type="library" name="Maven: dom4j:dom4j:1.6.1" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate:hibernate-commons-annotations:3.2.0.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.1.Final" level="project" />
+    <orderEntry type="library" name="Maven: javax.transaction:jta:1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate:hibernate-c3p0:3.6.9.Final" level="project" />
+    <orderEntry type="library" name="Maven: c3p0:c3p0:0.9.1" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate:hibernate-oscache:3.6.9.Final" level="project" />
+    <orderEntry type="library" name="Maven: opensymphony:oscache:2.1" level="project" />
+    <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.9" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.6.4" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-log4j12:1.6.4" level="project" />
+    <orderEntry type="library" name="Maven: log4j:log4j:1.2.16" level="project" />
+    <orderEntry type="library" name="Maven: cglib:cglib:2.2.2" level="project" />
+    <orderEntry type="library" name="Maven: commons-fileupload:commons-fileupload:1.2.2" level="project" />
+    <orderEntry type="library" name="Maven: commons-io:commons-io:2.0.1" level="project" />
+    <orderEntry type="library" name="Maven: commons-dbcp:commons-dbcp:1.4" level="project" />
+    <orderEntry type="library" name="Maven: commons-pool:commons-pool:1.5.4" level="project" />
+    <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.6" level="project" />
+    <orderEntry type="library" name="Maven: org.compass-project:compass:2.2.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.lucene:lucene-core:2.4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.aspectj:aspectjrt:1.6.9" level="project" />
+    <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.6.9" level="project" />
+    <orderEntry type="library" name="Maven: net.sf.json-lib:json-lib:jdk15:2.4" level="project" />
+    <orderEntry type="library" name="Maven: commons-beanutils:commons-beanutils:1.8.0" level="project" />
+    <orderEntry type="library" name="Maven: net.sf.ezmorph:ezmorph:1.0.6" level="project" />
+    <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.2.2" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
+    <orderEntry type="library" name="Maven: com.thoughtworks.xstream:xstream:1.4.3" level="project" />
+    <orderEntry type="library" name="Maven: xmlpull:xmlpull:1.1.3.1" level="project" />
+    <orderEntry type="library" name="Maven: xpp3:xpp3_min:1.1.4c" level="project" />
+    <orderEntry type="library" name="Maven: com.thoughtworks.xstream:xstream-hibernate:1.4.3" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.poi:poi:3.8" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.1" level="project" />
+    <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.5" level="project" />
+    <orderEntry type="library" name="Maven: jaxen:jaxen:1.1.4" level="project" />
+    <orderEntry type="library" name="Maven: org.opensymphony.quartz:quartz:1.6.1" level="project" />
+    <orderEntry type="library" name="Maven: com.google.zxing:javase:2.0" level="project" />
+    <orderEntry type="library" name="Maven: com.google.zxing:core:2.0" level="project" />
+    <orderEntry type="library" name="Maven: com.sun.jna:jna:3.0.9" level="project" />
+    <orderEntry type="library" name="Maven: javax.jms:javax.jms-api:2.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-jms:3.1.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.activemq:activemq-core:5.7.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.geronimo.specs:geronimo-jms_1.1_spec:1.1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.activemq:kahadb:5.7.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.activemq.protobuf:activemq-protobuf:1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.fusesource.mqtt-client:mqtt-client:1.3" level="project" />
+    <orderEntry type="library" name="Maven: org.fusesource.hawtdispatch:hawtdispatch-transport:1.11" level="project" />
+    <orderEntry type="library" name="Maven: org.fusesource.hawtdispatch:hawtdispatch:1.11" level="project" />
+    <orderEntry type="library" name="Maven: org.fusesource.hawtbuf:hawtbuf:1.9" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.geronimo.specs:geronimo-j2ee-management_1.1_spec:1.0.1" level="project" />
+    <orderEntry type="library" name="Maven: commons-net:commons-net:3.1" level="project" />
+    <orderEntry type="library" name="Maven: org.jasypt:jasypt:1.9.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-test:3.1.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: javax.websocket:javax.websocket-api:1.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.tomcat:tomcat-catalina:7.0.27" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.tomcat:tomcat-juli:7.0.27" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.tomcat:tomcat-annotations-api:7.0.27" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.tomcat:tomcat-api:7.0.27" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.tomcat:tomcat-util:7.0.27" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.tomcat:tomcat-coyote:7.0.39" level="project" />
+    <orderEntry type="library" name="Maven: org.java-websocket:Java-WebSocket:1.3.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.tomcat:tomcat-servlet-api:8.5.4" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.tomcat:tomcat-jsp-api:8.5.4" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.tomcat:tomcat-el-api:8.5.4" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish:javax.json:1.0.4" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: javax:javaee-api:7.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: com.sun.mail:javax.mail:1.5.0" level="project" />
+    <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
+    <orderEntry type="library" name="Maven: redis.clients:jedis:2.9.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-pool2:2.4.2" level="project" />
+    <orderEntry type="library" name="Maven: com.sun.jersey:jersey-server:1.18" level="project" />
+    <orderEntry type="library" name="Maven: com.sun.jersey:jersey-core:1.18" level="project" />
+    <orderEntry type="library" name="Maven: com.sun.jersey:jersey-json:1.18" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.jettison:jettison:1.1" level="project" />
+    <orderEntry type="library" name="Maven: com.sun.xml.bind:jaxb-impl:2.2.3-1" level="project" />
+    <orderEntry type="library" name="Maven: javax.xml.bind:jaxb-api:2.2.2" level="project" />
+    <orderEntry type="library" name="Maven: javax.xml.stream:stax-api:1.0-2" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.2" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.2" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-jaxrs:1.9.2" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-xc:1.9.2" level="project" />
+    <orderEntry type="library" name="Maven: com.sun.jersey:jersey-client:1.18" level="project" />
+    <orderEntry type="library" name="Maven: com.sun.jersey.contribs:jersey-spring:1.18" level="project" />
+    <orderEntry type="library" name="Maven: com.sun.jersey:jersey-servlet:1.18" level="project" />
+  </component>
+</module>

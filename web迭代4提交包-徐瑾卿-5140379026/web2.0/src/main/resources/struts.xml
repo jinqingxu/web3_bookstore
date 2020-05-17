@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <!-- 指定国际化资源文件的baseName为uploadFile-->
+
+    <!-- 设置该应用使用的编码集为utf-8 -->
+    <constant name="struts.i18n.encoding" value="utf-8"></constant>
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.custom.i18n.resources" value="i18n" />
+    <!-- enable 'action' attribute -->
+    <constant name="struts.mapper.action.prefix.enabled" value="false" />
+    <!-- enable 'method'  attribute-->
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+
+    <package name="FrameModel"  extends="struts-default,json-default"  >
+        <result-types> <result-type name="json" class="org.apache.struts2.json.JSONResult"/> </result-types>
+        <default-action-ref name="simpleViewResultAction"/>
+
+        <action name="mainAction" class="com.module.action.MainAction">
+            <result name="success">/i18n.jsp</result>
+        </action>
+
+
+
+        <action name="userLogin" class="com.module.action.LoginAction" >
+            <!-- 定义两个逻辑视图和物理资源之间的映射 -->
+            <result name="admin">/welcomeadmin.jsp</result>
+            <result name="user">/welcomeuser.jsp</result>
+            <result name="fail">/wrong.jsp</result>
+        </action>
+
+        <action name="userRegister" class="com.module.action.RegisterAction">
+            <!-- 定义两个逻辑视图和物理资源之间的映射 -->
+            <result name="success">/index.jsp</result>
+            <result name="fail">/wrong.jsp</result>
+        </action>
+        <action name="userGet" class="com.module.action.UserGetAction" method="userget">
+
+            <result  name="json">
+                <param name="root">jsonresult</param>
+            </result>
+
+        </action>
+        <action name="userInsert" class="com.module.action.UserInsertAction">
+                <result name="success"></result>
+                <result name="fail">/wrong.jsp</result>
+
+        </action>
+        <action name="userUpdate" class="com.module.action.UserUpdateAction">
+
+
+        </action>
+        <action name="userDelete" class="com.module.action.UserDeleteAction">
+
+
+        </action>
+        <action name="userQuery" class="com.module.action.UserQueryAction">
+
+
+        </action>
+
+        <action name="bookList" class="com.module.action.BookListAction">
+            <result  name="success">/login/broswerbook.jsp</result>
+            <result name="fail">/login/wrong.jsp</result>
+        </action>
+        <action name="bookGet" class="com.module.action.BookGetAction" method="bookget">
+            <result name="success">/admin/adminbook.jsp</result>
+        </action>
+        <action name="bookInsert" class="com.module.action.BookInsertAction">
+            <result name="success"></result>
+            <result name="fail">/wrong.jsp</result>
+        </action>
+        <action name="bookUpdate" class="com.module.action.BookUpdateAction">
+        </action>
+        <action name="bookDelete" class="com.module.action.BookDeleteAction">
+        </action>
+        <action name="bookqueryid" class="com.module.action.BookQueryAction" method="querybyid">
+            <result  name="success">/login/broswerbook.jsp</result>
+        </action>
+        <action name="cartinsert" class="com.module.action.CartAction" method="cartinsert">
+            <result  name="success">/login/broswerbook.jsp</result>
+            <result name="fail">/wrong.jsp</result>
+        </action>
+        <action name="cartView" class="com.module.action.CartAction" method="cartview">
+            <result  name="success">/login/cart.jsp</result>
+        </action>
+
+        <action name="statistictwo" class="com.module.action.StatisticAction" method="statistictwo">
+            <result name="success">/statistic.jsp</result>
+        </action>
+        <action name="statisticone" class="com.module.action.StatisticAction" method="statisticone">
+            <result name="success">/statistic.jsp</result>
+        </action>
+        <action name="photoinsert" class="com.module.action.PhotoInsertAction" >
+            <interceptor-ref name="fileUpload">
+                <!-- 配置允许上传的文件类型 -->
+                <param name="allowedTypes">image/bmp,image/png,image/gif,
+                    image/jpeg,image/pjpeg,image/x-png</param>
+                <!-- 配置允许上传文件的大小(单位字节) -->
+                <param name="maximumSize">80000</param>
+            </interceptor-ref>
+
+            <interceptor-ref name="defaultStack"></interceptor-ref>
+
+            <result name="success">/admin/user.jsp</result>
+        </action>
+        <action name="photoget" class="com.module.action.PhotoGetAction" >
+            <result name="success">/admin/user.jsp</result>
+        </action>
+
+        <action name="submit" class="com.module.action.PayAction" method="submit">
+            <result name="success">/login/successfulpay.jsp</result>
+        </action>
+
+        <action name="keyPair" class="com.module.action.PayAction" method="keyPair">
+
+                <result name="json">
+                    <param name="root">jsonresult</param>
+                </result>
+
+        </action>
+        <action name="orderPlace" class="com.module.action.OrderPlaceAction" method="orderplace">
+            <result name="success">/login/order.jsp</result>
+        </action>
+        <action name="payaction" class="com.module.action.PayAction">
+            <result name="success">/login/successfulpay.jsp</result>
+            <result name="fail">/login/wrong.jsp</result>
+        </action>
+       <action name="countAdd" class="com.module.action.CountAction">
+           <result name="success">/login/welcomeuser.jsp</result>
+       </action>
+        <action name="userLogout" class="com.module.action.LogoutAction">
+            <result name="success">/again/index.jsp</result>
+        </action>
+        <action name="userView" class="com.module.action.UserViewAction">
+            <result name="success">/login/myorder.jsp</result>
+        </action>
+        <action name="orderview" class="com.module.action.OrderViewAction">
+            <result name="success">/login/myorder.jsp</result>
+        </action>
+        <action name="newBookList" class="com.module.action.NewBookListAction">
+            <result name="success">/login/broswerbook.jsp</result>
+        </action>
+        <action name="updatemylike" class="com.module.action.BookQueryAction" method="updatemylike">
+            <result  name="success">/login/broswerbook.jsp</result>
+        </action>
+        <action name="answer" class="com.module.message.OrderPlaceServer" method="onMessage">
+            <result name="success">/login/welcomeuser.jsp</result>
+        </action>
+        <action name="overview" class="com.module.action.OrderViewAction">
+            <result name="success">/login/myorder.jsp</result>
+        </action>
+        <action name="getpublickey" class="com.module.action.PayAction" method="getPublicKey">
+            <result name="success">/login/order.jsp</result>
+        </action>
+        <action name="addcomment" class="com.module.action.AddCommentAction" >
+            <result name="success">/login/comment.jsp</result>
+        </action>
+        <action name="getcomment" class="com.module.action.GetCommentAction">
+            <result name="success">/login/comment.jsp</result>
+        </action>
+        <action name="searchcomment" class="com.module.action.SearchCommentAction">
+            <result name="success">/login/comment.jsp</result>
+        </action>
+        <action name="getlog" class="com.module.action.GetLogAction">
+            <result name="success">/login/statistic.jsp</result>
+        </action>
+    </package>
+    <constant name="struts.action.excludePattern" value="/websocketbot"></constant>
+
+</struts>

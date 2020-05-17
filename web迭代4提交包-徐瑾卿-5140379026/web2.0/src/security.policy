@@ -1,0 +1,11 @@
+grant {
+permission com.module.permission.CategoryPemission "1" ,"book";
+permission com.module.permission.CategoryPemission "2","study";
+permission com.module.permission.CategoryPemission "3","travel";
+permission com.module.permission.CategoryPemission "4","other";
+permission com.module.permission.CategoryPemission "5","english";
+permission com.module.permission.CategoryPemission "6","math";
+permission com.module.permission.CategoryPemission "7","chinese";
+permission com.module.permission.CategoryPemission "8","skill";
+permission com.module.permission.CategoryPemission "9","novel";
+};

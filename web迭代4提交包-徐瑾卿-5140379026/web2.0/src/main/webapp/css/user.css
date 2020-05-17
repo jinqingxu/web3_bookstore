@@ -1,0 +1,113 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color:#FFFFFF;
+
+}
+.clear{
+    clear:both;
+}
+/*head*/
+#head{
+    background-color:#FFFAF0;
+    width:960px;
+    height:60px;
+    margin-left:220px;
+    margin-right:220px;
+
+}
+/*container*/
+#container{
+    background-color:#FFDDAA;
+    width:960px;
+    height:600px;
+    margin-left:220px;
+    margin-right:220px;
+
+
+
+}
+
+
+/*content*/
+#basic{
+    float:left;
+    background-color:#FFFFBB;
+    width:480px;
+    height:600px;
+
+
+}
+#detail{
+    position:relative;
+    bottom:11.5px;
+    float:left;
+    background-color:#FFDDAA;
+    width:480px;
+    height:600px;
+    margin-top:0px;
+
+
+}
+#bhead{
+    background-color:#FFFAFA;
+    width:480px;
+    height:50px;
+
+
+}
+#bcontent{
+    float:left;
+    background-color:#FFFFF0;
+    width:480px;
+    height:550px;
+
+
+}
+#dcontent{
+    float:left;
+    background-color:#FFFAFA;
+    width:480px;
+    height:550px;
+
+
+}
+#photo{
+    float:left;
+    background-color:#FFFAFA;
+    width:480px;
+    height:450px;
+}
+#video{
+    float:left;
+    background-color:#FFFAF0;
+    width:480px;
+    height:50px;
+}
+#file{
+    float:left;
+    background-color:#FFFAFA;
+    width:480px;
+    height:50px;
+}
+#dhead{
+    background-color:#FFFFF0;
+    width:480px;
+    height:50px;
+
+
+}
+
+/*foot*/
+#foot{
+    background-color:#FFFAF0;
+    height:30px;
+    width:960px;
+    margin-left:220px;
+    margin-right:220px;
+
+
+
+}

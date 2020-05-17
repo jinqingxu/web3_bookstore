@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <!-- 指定国际化资源文件的baseName为uploadFile-->
+    <constant name="struts.custom.i18n.resources" value="uploadFile"></constant>
+    <!-- 设置该应用使用的编码集为utf-8 -->
+    <constant name="struts.i18n.encoding" value="utf-8"></constant>
+
+
+    <package name="FrameModel"  extends="struts-default,json-default" >
+        <result-types> <result-type name="json" class="org.apache.struts2.json.JSONResult"/> </result-types>
+        <default-action-ref name="simpleViewResultAction"/>
+
+
+
+
+        <action name="userLogin" class="com.module.action.LoginAction" >
+            <!-- 定义两个逻辑视图和物理资源之间的映射 -->
+            <result name="admin">/welcomeadmin.jsp</result>
+            <result name="user">/user.jsp</result>
+            <result name="fail">/wrong.jsp</result>
+        </action>
+
+        <action name="userRegister" class="com.module.action.RegisterAction">
+            <!-- 定义两个逻辑视图和物理资源之间的映射 -->
+            <result name="success">/index.jsp</result>
+            <result name="fail">/wrong.jsp</result>
+        </action>
+        <action name="userGet" class="com.module.action.UserGetAction" method="userget">
+
+            <result  name="json">
+                <param name="root">jsonresult</param>
+            </result>
+
+        </action>
+        <action name="userInsert" class="com.module.action.UserInsertAction">
+                <result name="success"></result>
+                <result name="fail">/wrong.jsp</result>
+
+        </action>
+        <action name="userUpdate" class="com.module.action.UserUpdateAction">
+
+
+        </action>
+        <action name="userDelete" class="com.module.action.UserDeleteAction">
+
+
+        </action>
+        <action name="userQuery" class="com.module.action.UserQueryAction">
+
+
+        </action>
+        <action name="bookList" class="com.module.action.BookListAction">
+
+            <result  name="success">/broswerbook.jsp</result>
+
+        </action>
+
+        <action name="bookInsert" class="com.module.action.BookInsertAction">
+            <result name="success"></result>
+            <result name="fail">/wrong.jsp</result>
+
+        </action>
+        <action name="bookUpdate" class="com.module.action.BookUpdateAction">
+
+
+        </action>
+        <action name="bookDelete" class="com.module.action.BookDeleteAction">
+
+
+        </action>
+        <action name="bookqueryid" class="com.module.action.BookQueryAction" method="querybyid">
+            <result  name="success">/broswerbook.jsp</result>
+
+        </action>
+        <action name="cartinsert" class="com.module.action.CartAction" method="cartinsert">
+            <result  name="success">/broswerbook.jsp</result>
+            <result name="fail">/wrong.jsp</result>
+        </action>
+        <action name="orderplace" class="com.module.action.OrderPlaceAction" method="orderplace">
+            <result  name="success">/cart.jsp</result>
+        </action>
+        <action name="statistictwo" class="com.module.action.StatisticAction" method="statistictwo">
+            <result name="success">/statistic.jsp</result>
+        </action>
+        <action name="statisticone" class="com.module.action.StatisticAction" method="statisticone">
+            <result name="success">/statistic.jsp</result>
+        </action>
+        <action name="photoinsert" class="com.module.action.PhotoInsertAction" >
+            <interceptor-ref name="fileUpload">
+                <!-- 配置允许上传的文件类型 -->
+                <param name="allowedTypes">image/bmp,image/png,image/gif,
+                    image/jpeg,image/pjpeg,image/x-png</param>
+                <!-- 配置允许上传文件的大小(单位字节) -->
+                <param name="maximumSize">80000</param>
+            </interceptor-ref>
+
+            <interceptor-ref name="defaultStack"></interceptor-ref>
+
+            <result name="success">/user.jsp</result>
+        </action>
+        <action name="photoget" class="com.module.action.PhotoGetAction" >
+            <result name="success">/user.jsp</result>
+        </action>
+
+    </package>
+
+
+</struts>

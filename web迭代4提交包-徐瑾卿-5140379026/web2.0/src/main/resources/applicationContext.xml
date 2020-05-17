@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+
+       xmlns:jms="http://www.springframework.org/schema/jms"
+       xmlns:amq="http://activemq.apache.org/schema/core"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+        http://www.springframework.org/schema/aop  http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+         http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx.xsd
+     http://www.springframework.org/schema/context
+                       http://www.springframework.org/schema/context/spring-context.xsd
+
+
+                       http://www.springframework.org/schema/jms
+                       http://www.springframework.org/schema/jms/spring-jms.xsd
+                       http://activemq.apache.org/schema/core
+                       http://activemq.apache.org/schema/core/activemq-core.xsd">
+
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+        <property name="url" value="jdbc:mysql://localhost:3306/mydb?useUnicode=true&amp;characterEncoding=UTF-8"></property>
+        <property name="username" value="root"></property>
+        <property name="password" value="xu9659"></property>
+        <property name="maxActive" value="100"></property>
+        <property name="defaultAutoCommit" value="true"></property>
+
+    </bean>
+    <!-- 激活组件扫描功能,在包cn.ysh.studio.spring.aop及其子包下面自动扫描通过注解配置的组件 -->
+    <context:component-scan base-package="com.module.service.serviceimpl">
+
+    </context:component-scan>
+    <!-- 激活自动代理功能 -->
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+    <bean id="aspectJAdvice" class="com.module.aop.AspectJAdvice"></bean>
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+
+        <property name="dataSource" ref="dataSource"></property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+            </props>
+        </property>
+        <property name="configLocation">
+            <value>classpath:/hibernate.cfg.xml</value>
+            <!--<value>hibernate.cfg.xml</value>-->
+        </property>
+
+        <property name="mappingResources">
+            <list>
+                <value>User.hbm.xml</value>
+                <value>Book.hbm.xml</value>
+                <value>Order.hbm.xml</value>
+                <value>Orderitem.hbm.xml</value>
+                <value>Log.hbm.xml</value>
+                <value>Comment.hbm.xml</value>
+            </list>
+        </property>
+
+    </bean>
+    <bean id="commentDao" class="com.module.dao.daoimpl.CommentDAOImpl">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+    <bean id="Task" class="com.module.thread.Task">
+        <property name="luceneService" ref="luceneService"></property>
+    </bean>
+    <bean id="commentService" class="com.module.service.serviceimpl.CommentServiceImpl">
+        <property name="commentDAO" ref="commentDao"></property>
+    </bean>
+    <bean id="payDao" class="com.module.dao.daoimpl.PayDaoImpl">
+    </bean>
+
+    <bean id="logDao" class="com.module.dao.daoimpl.LogDAOImpl">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+
+    <bean id="orderDao" class="com.module.dao.daoimpl.OrderDAOImpl" scope="singleton">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+    <bean id="orderitemDao" class="com.module.dao.daoimpl.OrderitemDAOImpl" scope="singleton">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+    <bean id="userDao" class="com.module.dao.daoimpl.UserDAOImpl" scope="singleton">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+<bean id="luceneService" class="com.module.lucene.LuceneServiceImpl">
+    <property name="commentService" ref="commentService"></property>
+</bean>
+
+    <bean id="bookDao" class="com.module.dao.daoimpl.BookDAOImpl" scope="singleton">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+    <bean id="logService" class="com.module.service.serviceimpl.LogServiceImpl">
+        <property name="logDao" ref="logDao"></property>
+    </bean>
+    <bean id="payService" class="com.module.service.serviceimpl.PayServiceImpl">
+        <property name="payDao" ref="payDao"></property>
+    </bean>
+
+
+    <bean id="userService" class="com.module.service.serviceimpl.UserServiceImpl">
+
+        <property name="userDao" ref="userDao"></property>
+    </bean>
+    <bean id="bookService" class="com.module.service.serviceimpl.BookServiceImpl">
+
+        <property name="bookDao" ref="bookDao"></property>
+    </bean>
+    <bean id="cartService" class="com.module.service.serviceimpl.CartServiceImpl" scope="session" >
+        <aop:scoped-proxy/>
+        <property name="bookDao" ref="bookDao"></property>
+    </bean>
+    <bean id="orderitemService" class="com.module.service.serviceimpl.OrderitemServiceImpl">
+        <property name="orderitemDao" ref="orderitemDao"></property>
+    </bean>
+    <bean id="orderService" class="com.module.service.serviceimpl.OrderServiceImpl">
+        <property name="orderDao" ref="orderDao"></property>
+        <property name="bookService" ref="bookService"></property>
+        <property name="cartService" ref="cartService"></property>
+        <property name="userService" ref="userService"></property>
+        <property name="orderitemService" ref="orderitemService"></property>
+    </bean>
+
+
+    <bean id="countService" class="com.module.service.serviceimpl.CountServiceImpl" scope="singleton">
+
+    </bean>
+    <bean id="aspectAdvice" class="com.module.aop.AspectJAdvice" >
+
+        <property name="logService" ref="logService"></property>
+    </bean>
+    <bean id="loginAction" class="com.module.action.LoginAction" scope="singleton">
+        <property name="userService" ref="userService"></property>
+        <property name="countService" ref="countService"></property>
+    </bean>
+
+    <bean id="RegisterAction" class="com.module.action.RegisterAction">
+        <property name="userService" ref="userService"></property>
+    </bean>
+    <bean id="UserInsertAction" class="com.module.action.UserInsertAction">
+        <property name="userService" ref="userService"></property>
+
+    </bean>
+    <bean id="UserUpdateAction" class="com.module.action.UserUpdateAction">
+        <property name="userService" ref="userService"></property>
+
+    </bean>
+    <bean id="CartAction" class="com.module.action.CartAction" >
+
+        <property name="cartService" ref="cartService"></property>
+    </bean>
+    <bean id="OrderPlaceAction" class="com.module.action.OrderPlaceAction">
+
+    </bean>
+
+<bean id="newBookListAction" class="com.module.action.NewBookListAction">
+    <property name="countService" ref="countService"></property>
+    <property name="bookService" ref="bookService"></property>
+    <property name="userService" ref="userService"></property>
+</bean>
+   <bean id="BookListAction" class="com.module.action.BookListAction">
+      <property name="countService" ref="countService"></property>
+       <property name="bookService" ref="bookService"></property>
+       <property name="userService" ref="userService"></property>
+   </bean>
+    <bean id="BookUpdateAction" class="com.module.action.BookUpdateAction">
+        <property name="bookService" ref="bookService"></property>
+    </bean>
+    <bean id="BookInsertAction" class="com.module.action.BookInsertAction">
+        <property name="bookService" ref="bookService"></property>
+    </bean>
+    <bean id="BookDeleteAction" class="com.module.action.BookDeleteAction">
+        <property name="bookService" ref="bookService"></property>
+    </bean>
+
+    <bean id="TestLoginModule" class="com.module.secure.TestLoginModule">
+        <property name="userDao" ref="userDao"></property>
+    </bean>
+    <bean id="userView" class="com.module.action.UserViewAction">
+        <property name="userService" ref="userService"></property>
+    </bean>
+    <bean id="txManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+    <tx:annotation-driven transaction-manager="txManager" order="2" />
+
+    <!-- 配置JMS连接工厂 -->
+    <bean id="connectionFactory" class="org.apache.activemq.spring.ActiveMQConnectionFactory">
+        <property name="brokerURL" value="tcp://localhost:61616" />
+    </bean>
+
+    <!-- 配置JMS模版 -->
+    <bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+        <property name="connectionFactory" ref="connectionFactory" />
+    </bean>
+
+    <!-- 发送消息的目的地（一个队列） -->
+    <bean id="requestDestination" class="org.apache.activemq.command.ActiveMQQueue">
+        <!-- 设置消息队列的名字 -->
+        <constructor-arg index="0" value="requestQueue" />
+    </bean>
+
+    <!-- 应答消息的目的地（一个队列） -->
+    <bean id="replyDestination" class="org.apache.activemq.command.ActiveMQQueue">
+        <!-- 设置消息队列的名字 -->
+        <constructor-arg index="0" value="replyQueue" />
+    </bean>
+
+    <!-- 消息生产者 -->
+    <bean id="producer" class="com.module.action.OrderPlaceAction">
+
+        <property name="jmsTemplate" ref="jmsTemplate" />
+        <property name="requestDestination" ref="requestDestination" />
+        <property name="replyDestination" ref="replyDestination" />
+        <property name="cartService" ref="cartService"></property>
+    </bean>
+
+    <!-- 消息消费者 -->
+    <bean id="consumer" class="com.module.message.OrderPlaceServer">
+        <property name="jmsTemplate" ref="jmsTemplate" />
+        <property name="orderService" ref="orderService"></property>
+
+    </bean>
+
+    <!-- 监听容器 -->
+    <bean id="jmsContainerRequest" class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+        <property name="connectionFactory" ref="connectionFactory" />
+        <property name="destination" ref="requestDestination" />
+        <property name="messageListener" ref="consumer" />
+    </bean>
+
+    <bean id="orderView" class="com.module.action.OrderViewAction">
+    <property name="orderService" ref="orderService"></property>
+    </bean>
+    <bean id="keyService" class="com.module.service.serviceimpl.KeyServiceImpl" scope="session">
+    <aop:scoped-proxy/>
+    </bean>
+    <bean id="payaction" class="com.module.action.PayAction">
+        <property name="keyService" ref="keyService"></property>
+        <property name="payService" ref="payService"></property>
+    </bean>
+
+
+
+
+</beans>
