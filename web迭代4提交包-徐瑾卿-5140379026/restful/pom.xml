@@ -21,7 +21,7 @@
     <!--<finalName>FrameModel</finalName>-->
   <!--</build>-->
     <properties>
-        <spring.version>3.1.1.RELEASE</spring.version>
+        <spring.version>5.2.22.RELEASE</spring.version>
         <struts.version>2.3.4</struts.version>
         <hibernate.version>3.6.9.Final</hibernate.version>
         <axis2.version>1.6.2</axis2.version>
